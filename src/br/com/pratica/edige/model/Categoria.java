@@ -11,6 +11,10 @@ public class Categoria {
     }
 
     public void setNome(String nome) {
+        if(nome == null || nome.trim().isEmpty()) {
+            throw new IllegalArgumentException("Categoria inválida!");
+        }
+
         this.nome = nome;
     }
 
